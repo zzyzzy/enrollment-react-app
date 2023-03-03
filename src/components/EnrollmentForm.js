@@ -25,6 +25,15 @@ const EnrollmentForm = (props) => {
             setMsgStyle('message');
             msg = `환영합니다, ${firstName} ${lastName} 님!!` +
                 `${email}로 등록관련 정보를 발송해드렸습니다`;
+
+            // 등록완료된 학생정보에 사용할 key 생성
+            const rndKey = Math.floor(1000+ Math.random() * 9000);
+            // 생성한 key와 등록완료된 학생정보를 props에 저장
+            let stud = {
+                key: rndKey, fname: firstName, lname: lastName,
+                program: props.chosenProgram, email: email
+            }
+            props.setStudDetails(stud);
         }
         setWelcomeMessage(msg);
         e.preventDefault();  // submit 기능 전파 중지
@@ -37,7 +46,7 @@ const EnrollmentForm = (props) => {
     return(
         <div>
             <div className="enrolContainer">
-            <form className="enrolForm" onSubmit={handleSubmit}>
+            <form className="enrolForm">
                 <ul className="ulEnrol">
                     <li>
                         <label htmlFor="FirstName"></label>
