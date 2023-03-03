@@ -3,7 +3,7 @@
     font-size: 26px;
     text-align: center;
     width: 500px;
-    padding:100px;
+    padding: 100px;
 }
 .enrolForm input[type=text] {
     margin :20px;
@@ -25,9 +25,11 @@
 .message
 {
     color:green;
-    font-family: inherit;
     font-size: 30px;
     font-style: italic;
+    padding-top: 45px;
+    padding-left: 120px;
+    display: flex;
 }
 .App {
     font-family: sans-serif;
@@ -47,4 +49,12 @@
     font-family: inherit;
     font-size: inherit;
     margin-left: 10px;
+}
+.redOne {
+    color: red;
+    font-style: italic;
+    font-size: 35px;
+    padding-top: 45px;
+    padding-left: 120px;
+    display: flex;
 }

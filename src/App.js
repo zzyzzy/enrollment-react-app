@@ -6,7 +6,7 @@ import EnrollmentForm from "./components/EnrollmentForm";
 const App = () => {
     const [program, setProgram] = useState("UG"); // 프로그램 종류
     const [ugseats, setUgSeats] = useState(60);
-    const [pgseats, setPgSeats] = useState(40);
+    const [pgseats, setPgSeats] = useState(5);
 
     const handleChange = (e) => {
         setProgram(e.target.value);
