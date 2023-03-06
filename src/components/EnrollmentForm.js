@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { MdEdit, MdDelete } from 'react-icons/md';
 import '../App.css';
 
 const EnrollmentForm = (props) => {
@@ -31,7 +32,9 @@ const EnrollmentForm = (props) => {
             // 생성한 key와 등록완료된 학생정보를 props에 저장
             let stud = {
                 key: rndKey, fname: firstName, lname: lastName,
-                program: props.chosenProgram, email: email
+                program: props.chosenProgram, email: email,
+                edit: <MdEdit className="actionIcon" />,
+                delete: <MdDelete className="actionIcon" />
             }
             props.setStudDetails(stud);
         }
